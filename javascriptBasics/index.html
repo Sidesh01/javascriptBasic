@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Basics Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>JavaScript Basics Example</h2>
+
+  <p id="output">This paragraph will be updated by JavaScript.</p>
+
+  <button onclick="changeText()">Click to change text</button>
+</div>
+
+<script>
+  // Variables and Data Types
+  let greeting = "Hello";
+  let number = 42;
+  let isTrue = true;
+  let fruits = ["apple", "banana", "orange"];
+  let person = { name: "John", age: 30 };
+
+  // Function declaration
+  function changeText() {
+    // DOM Manipulation
+    let paragraph = document.getElementById("output");
+    // Conditional statement
+    if (isTrue) {
+      paragraph.textContent = greeting + ", world!";
+    } else {
+      paragraph.textContent = "Condition is false";
+    }
+  }
+</script>
+
+</body>
+</html>
