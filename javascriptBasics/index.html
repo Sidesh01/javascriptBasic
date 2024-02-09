@@ -1,87 +1,9 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Basics Example 2</title>
-  <style>
-    /* CSS styles for the page */
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-  <h2>JavaScript Basics Example 2</h2>
-
-  <!-- Input field for entering a number -->
-  <input type="text" id="inputNumber" placeholder="Enter a number">
-  
-  <!-- Button to calculate square -->
-  <button onclick="calculateSquare()">Calculate Square</button>
-  
-  <!-- Paragraph to display the square result -->
-  <p id="output">Square will be displayed here.</p>
-</div>
-
-<script>
-  // Function to calculate square of a number
-  function calculateSquare() {
-    // Get input value
-    let inputNumber = document.getElementById("inputNumber").value;
-
-    // Parse input value as a number
-    let number = parseFloat(inputNumber);
-
-    // Check if input is a valid number
-    if (!isNaN(number)) {
-      // Calculate square
-      let square = number * number;
-
-      // Display square
-      document.getElementById("output").textContent = "The square of " + number + " is " + square;
-    } else {
-      // Display error message if input is not a valid number
-      document.getElementById("output").textContent = "Invalid input. Please enter a valid number.";
-    }
-  }
-</script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Basics Example 2</title>
+  <title>JavaScript Basics Example</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -93,11 +15,6 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #f9f9f9;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
     }
     button {
       padding: 10px 20px;
@@ -115,35 +32,94 @@
 <body>
 
 <div class="container">
-  <h2>JavaScript Basics Example 2</h2>
+  <h2>JavaScript Basics Example</h2>
 
-  <input type="text" id="inputNumber" placeholder="Enter a number">
-  <button onclick="calculateSquare()">Calculate Square</button>
-  <p id="output">Square will be displayed here.</p>
+  <p id="output">This paragraph will be updated by JavaScript.</p>
+
+  <button onclick="changeText()">Click to change text</button>
 </div>
 
 <script>
-  // Function to calculate square of a number
-  function calculateSquare() {
-    // Get input value
-    let inputNumber = document.getElementById("inputNumber").value;
+  // Variables and Data Types
+  let greeting = "Hello";
+  let number = 42;
+  let isTrue = true;
+  let fruits = ["apple", "banana", "orange"];
+  let person = { name: "John", age: 30 };
 
-    // Parse input value as a number
-    let number = parseFloat(inputNumber);
-
-    // Check if input is a valid number
-    if (!isNaN(number)) {
-      // Calculate square
-      let square = number * number;
-
-      // Display square
-      document.getElementById("output").textContent = "The square of " + number + " is " + square;
+  // Function declaration
+  function changeText() {
+    // DOM Manipulation
+    let paragraph = document.getElementById("output");
+    // Conditional statement
+    if (isTrue) {
+      paragraph.textContent = greeting + ", world!";
     } else {
-      // Display error message if input is not a valid number
-      document.getElementById("output").textContent = "Invalid input. Please enter a valid number.";
+      paragraph.textContent = "Condition is false";
     }
   }
 </script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
 
+<div class="container">
+<h2>JavaScript Basics Example 2</h2>
+
+<input type="text" id="inputNumber" placeholder="Enter a number">
+<button onclick="calculateSquare()">Calculate Square</button>
+<p id="output">Square will be displayed here.</p>
+</div>
+
+<script>
+// Function to calculate square of a number
+function calculateSquare() {
+  // Get input value
+  let inputNumber = document.getElementById("inputNumber").value;
+
+  // Parse input value as a number
+  let number = parseFloat(inputNumber);
+
+  // Check if input is a valid number
+  if (!isNaN(number)) {
+    // Calculate square
+    let square = number * number;
+
+    // Display square
+    document.getElementById("output").textContent = "The square of " + number + " is " + square;
+  } else {
+    // Display error message if input is not a valid number
+    document.getElementById("output").textContent = "Invalid input. Please enter a valid number.";
+  }
+}
+</script>
 </body>
 </html>
