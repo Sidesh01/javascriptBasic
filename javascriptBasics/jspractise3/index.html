@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice HTML File</title>
+</head>
+<body>
+
+<!-- First Code Segment: Button Click Counter -->
+<div>
+  <h2>Button Click Counter</h2>
+  <button id="clickButton">Click Me</button>
+  <p>Number of clicks: <span id="clickCount">0</span></p>
+</div>
+
+<script>
+  // Button click counter
+  let clickCount = 0;
+  document.getElementById("clickButton").addEventListener("click", function() {
+    clickCount++;
+    document.getElementById("clickCount").textContent = clickCount;
+  });
+</script>
+
+<!-- Second Code Segment: Simple Calculator -->
+<div>
+  <h2>Simple Calculator</h2>
+  <input type="number" id="num1" placeholder="Enter number">
+  <input type="number" id="num2" placeholder="Enter number">
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <p>Sum: <span id="sumResult">-</span></p>
+</div>
+
+<script>
+  // Simple calculator
+  function calculateSum() {
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let sum = num1 + num2;
+    document.getElementById("sumResult").textContent = sum;
+  }
+</script>
+
+</body>
+</html>
